@@ -8,6 +8,7 @@ RUN apt-get install -y php7.3 php7.3-cli php7.3-fpm php-cgi php7.3-mysql \
 	mariadb-server php-mbstring
 RUN apt-get install -y wget
 
-ADD ./srcs* ./
+ADD ./srcs/* ./
 
-#CMD bash /initmain.sh
+EXPOSE 80 443
+CMD bash /start_container.sh
